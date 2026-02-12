@@ -48,7 +48,8 @@ const advantages = [
   'Tax incentives for investors',
 ];
 
-export default function Invest() {
+export default function Invest({ isTeaser = false }: { isTeaser?: boolean }) {
+  void isTeaser;
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 

@@ -60,7 +60,8 @@ const news = [
   },
 ];
 
-export default function News() {
+export default function News({ isTeaser = false }: { isTeaser?: boolean }) {
+  void isTeaser;
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 

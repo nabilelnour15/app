@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Clock, BookOpen, Landmark, Scroll, ArrowRight } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const timeline = [
   {
@@ -178,62 +179,96 @@ export default function Explore() {
           </div>
 
           {/* Timeline Content */}
-          <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-            <div className="grid lg:grid-cols-2">
-              {/* Left - Content */}
-              <div className="p-8 lg:p-12">
-                <div
-                  className={`inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r ${activeTimeline.color} rounded-full mb-6`}
-                >
-                  <BookOpen className="w-4 h-4 text-white" />
-                  <span className="text-white text-sm font-semibold">
-                    {activeTimeline.period}
-                  </span>
-                </div>
-
-                <h3 className="font-['Montserrat'] text-2xl md:text-3xl font-bold text-[#0d1623] mb-4">
-                  {activeTimeline.title}
-                </h3>
-
-                <p className="text-[#5d6c7b] text-lg leading-relaxed mb-8">
-                  {activeTimeline.description}
-                </p>
-
-                <div className="space-y-3">
-                  <p className="font-semibold text-[#0d1623] text-sm uppercase tracking-wider">
-                    Key Events
-                  </p>
-                  {activeTimeline.events.map((event, index) => (
-                    <div
-                      key={index}
-                      className="flex items-center gap-3 text-[#333333]"
-                    >
-                      <div
-                        className={`w-2 h-2 rounded-full bg-gradient-to-r ${activeTimeline.color}`}
-                      />
-                      <span className="text-sm">{event}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Right - Visual */}
-              <div
-                className={`relative bg-gradient-to-br ${activeTimeline.color} p-8 lg:p-12 flex items-center justify-center`}
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden min-h-[500px]">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeEra}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                transition={{ duration: 0.3 }}
+                className="grid lg:grid-cols-2 h-full"
               >
-                <div className="text-center text-white">
-                  <Landmark className="w-24 h-24 mx-auto mb-6 opacity-80" />
-                  <p className="text-6xl font-bold font-['Montserrat'] mb-2">
-                    {activeTimeline.period.split(' ')[0]}
-                  </p>
-                  <p className="text-white/80 text-lg">{activeTimeline.era}</p>
+                {/* Left - Content */}
+                <div className="p-8 lg:p-12">
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.1 }}
+                    className={`inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r ${activeTimeline.color} rounded-full mb-6`}
+                  >
+                    <BookOpen className="w-4 h-4 text-white" />
+                    <span className="text-white text-sm font-semibold">
+                      {activeTimeline.period}
+                    </span>
+                  </motion.div>
+
+                  <motion.h3
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2 }}
+                    className="font-['Montserrat'] text-2xl md:text-3xl font-bold text-[#0d1623] mb-4"
+                  >
+                    {activeTimeline.title}
+                  </motion.h3>
+
+                  <motion.p
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3 }}
+                    className="text-[#5d6c7b] text-lg leading-relaxed mb-8"
+                  >
+                    {activeTimeline.description}
+                  </motion.p>
+
+                  <div className="space-y-3">
+                    <p className="font-semibold text-[#0d1623] text-sm uppercase tracking-wider">
+                      Key Events
+                    </p>
+                    {activeTimeline.events.map((event, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.4 + index * 0.1 }}
+                        className="flex items-center gap-3 text-[#333333]"
+                      >
+                        <div
+                          className={`w-2 h-2 rounded-full bg-gradient-to-r ${activeTimeline.color}`}
+                        />
+                        <span className="text-sm">{event}</span>
+                      </motion.div>
+                    ))}
+                  </div>
                 </div>
 
-                {/* Decorative Elements */}
-                <div className="absolute top-4 right-4 w-16 h-16 border-2 border-white/20 rounded-full" />
-                <div className="absolute bottom-4 left-4 w-12 h-12 bg-white/10 rounded-lg" />
-              </div>
-            </div>
+                {/* Right - Visual */}
+                <div
+                  className={`relative bg-gradient-to-br ${activeTimeline.color} p-8 lg:p-12 flex items-center justify-center`}
+                >
+                  <motion.div
+                    initial={{ scale: 0.9, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ delay: 0.2 }}
+                    className="text-center text-white"
+                  >
+                    <Landmark className="w-24 h-24 mx-auto mb-6 opacity-80" />
+                    <p className="text-6xl font-bold font-['Montserrat'] mb-2">
+                      {activeTimeline.period.split(' ')[0]}
+                    </p>
+                    <p className="text-white/80 text-lg">{activeTimeline.era}</p>
+                  </motion.div>
+
+                  {/* Decorative Elements */}
+                  <motion.div
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                    className="absolute top-4 right-4 w-16 h-16 border-2 border-white/20 rounded-full border-dashed"
+                  />
+                  <div className="absolute bottom-4 left-4 w-12 h-12 bg-white/10 rounded-lg" />
+                </div>
+              </motion.div>
+            </AnimatePresence>
           </div>
         </div>
 

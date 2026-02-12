@@ -1,0 +1,197 @@
+import { 
+  Plane, Train, Bus, Car, 
+  MapPin, Camera, ShoppingBag, 
+  Landmark, BookOpen, GraduationCap, 
+  Briefcase, Sun
+} from 'lucide-react';
+
+export const climateData = {
+  months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+  highs: [18, 19, 21, 24, 27, 29, 31, 31, 30, 28, 24, 20],
+  lows: [10, 10, 12, 14, 18, 22, 24, 24, 23, 19, 15, 11],
+  precipitation: [53, 35, 13, 2.6, 1, 0, 0, 0, 0.8, 8.3, 37, 53],
+  seaTemp: [18, 17, 17, 18, 20, 23, 25, 26, 26, 25, 22, 20],
+  description: "Alexandria has a hot desert climate (BWh), but highly influenced by sea breeze. Summers are sunny, hot (avg 31°C), and humid, though evenings are breezy. Winters are mild (lows ~10-12°C) with occasional rain. Best time to visit is spring (March–June) and autumn (September–November)."
+};
+
+export const transportTabs = [
+  {
+    id: 'get-in',
+    label: 'Getting In',
+    content: [
+      {
+        type: 'By Plane',
+        icon: Plane,
+        description: 'Borg el Arab (HBE) is 45km SW. No public transport; taxis cost LE400+ and take 60-90 min. Serves Cairo, Luxor, Gulf States, and Istanbul.'
+      },
+      {
+        type: 'By Train',
+        icon: Train,
+        description: 'Frequent AC trains from Cairo. "Specials" take 2.5hrs. Foreigner rates: AC1 $40, AC2 $35. Arrive Misr Station (Downtown) or Sidi Gaber.'
+      },
+      {
+        type: 'By Bus',
+        icon: Bus,
+        description: 'Operators include Go Bus, West Delta, Super Jet (LE100-300). Main station is Moharam Bek, but some stop at Sidi Gaber.'
+      },
+      {
+        type: 'By Car',
+        icon: Car,
+        description: 'Agriculture Road (90km/h, crowded) or Desert Road (100km/h, faster). Both routes take approx 3 hours from Cairo.'
+      }
+    ]
+  },
+  {
+    id: 'get-around',
+    label: 'Getting Around',
+    content: [
+      {
+        type: 'Taxi & Rideshare',
+        icon: Car,
+        description: 'Yellow/black taxis are unmetered; agree on fare first. Uber and Careem are available (Careem requires local #).'
+      },
+      {
+        type: 'Tram',
+        icon: Train,
+        description: 'Blue (Ramleh) and Yellow (City) lines. Oldest in Africa. Flat fare LE1. First car in Blue trams is women-only.'
+      },
+      {
+        type: 'Bus & Minibus',
+        icon: Bus,
+        description: '14-person microbuses operate on hop-and-go basis. Confusing for non-locals; rely on hand signals or destination shouts.'
+      },
+      {
+        type: 'Walking',
+        icon: MapPin,
+        description: 'The Corniche stretches 30km and is perfect for walking. Downtown/Bahari areas are very walkable.'
+      }
+    ]
+  }
+];
+
+export const attractionCategories = [
+  {
+    id: 'historical',
+    label: 'Historical',
+    icon: Landmark,
+    items: [
+      { name: 'Citadel of Qaitbay', desc: '1477 fortress on Pharos site. Maritime Museum inside. LE150 foreigners.', location: 'Anfushi', image: '/images/feature-citadel.jpg' },
+      { name: 'Catacombs of Kom el Shoqafa', desc: 'Roman burial site, "Mound of Shards". Deep spiral stairway. LE150.', location: 'Carmouz', image: '/images/blog-archaeology.jpg' },
+      { name: 'Pompey\'s Pillar', desc: '25m granite column for Diocletian (297 AD). LE150.', location: 'Karmouz', image: '/images/pompeys_pillar.webp' },
+      { name: 'Roman Amphitheatre', desc: 'Kom el-Dikka. Marble seating for 800, Villa of the Birds mosaics. LE150.', location: 'Kom el-Dikka', image: '/images/roman_amphitheatre.webp' },
+      { name: 'Montaza Palace', desc: 'Royal gardens (LE25 entry) and palace complex (Salamlek hotel).', location: 'El Montazah', image: '/images/feature-beach.jpg' },
+      { name: 'Ras El-Tin Palace', desc: 'Oldest royal palace in Egypt (Exterior/Gardens only).', location: 'Western Harbor', image: '/images/service-visitors.jpg' }
+    ]
+  },
+  {
+    id: 'museums',
+    label: 'Museums',
+    icon:  BookOpen,
+    items: [
+      { name: 'Alexandria National Museum', desc: '1800+ pieces, Pharaonic to Islamic. LE100.', location: 'Tariq el-Horreyya', image: '/images/blog-culture.jpg' },
+      { name: 'Graeco-Roman Museum', desc: 'Vast collection (3rd cent BC - 3rd cent CE). LE150.', location: 'Latin Quarter', image: '/images/service-culture.jpg' },
+      { name: 'Royal Jewelry Museum', desc: 'Opulent jewelry of the Muhammad Ali Dynasty.', location: 'Zizenia', image: '/images/royal_jewelry_museum.webp' },
+      { name: 'Cavafy Museum', desc: 'House of the Greek-Alexandrian poet. (Closed as of Feb 2024).', location: 'Downtown', image: '/images/blog-culture.jpg' },
+      { name: 'Museum of Fine Arts', desc: 'Features works by Egyptian and Middle Eastern artists.', location: 'Moharam Bek', image: '/images/blog-culture.jpg' }
+    ]
+  },
+  {
+    id: 'religious',
+    label: 'Religious',
+    icon: Sun,
+    items: [
+      { name: 'El-Mursi Abul-Abbas Mosque', desc: 'Stunning mosque with 73m minaret over a Sufi saint\'s tomb.', location: 'Anfoushi', image: '/images/abul_abbas_mosque.webp' },
+      { name: 'Eliyahu Hanavi Synagogue', desc: 'Neo-Gothic synagogue standing since 1850.', location: 'Nabi Daniel St', image: '/images/eliyahu_hanavi_synagogue.webp' },
+      { name: 'St. Mark\'s Cathedral', desc: 'Historical seat of the Coptic Orthodox Pope.', location: 'Raml Station', image: '/images/blog-culture.jpg' }
+    ]
+  },
+  {
+    id: 'modern',
+    label: 'Modern',
+    icon: Camera,
+    items: [
+      { name: 'Bibliotheca Alexandrina', desc: 'Massive library, planetarium, antiquities museum. LE150 foreigners.', location: 'Shatby', image: '/images/feature-library.jpg' },
+      { name: 'Stanley Bridge', desc: 'Iconic bridge with panoramic sea views.', location: 'Stanley', image: '/images/stanley_bridge.webp' },
+      { name: 'Planetarium Science Center', desc: 'Neon-lit spherical theater inside the Library complex.', location: 'Shatby', image: '/images/planetarium.webp' }
+    ]
+  }
+];
+
+export const activitiesData = [
+  {
+    title: 'Do',
+    icon: Camera,
+    items: ['Double Decker Bus (Corniche LE25)', 'Montazah Royal Gardens', 'Diving (Sunken Cities/Cleopatra Palace)', 'Cinema (Renaissance Royal)', 'Boat Ride at Ras El-Tin'],
+  },
+  {
+    title: 'Buy',
+    icon: ShoppingBag,
+    items: ['Souq El-Attarine (Antiques)', 'Zan\'et El-Sittat (Fabrics/Souvenirs)', 'City Centre Alexandria (Mall)', 'San Stefano Grand Plaza', 'Local Bookshops (Nabi Daniel)'],
+  },
+  {
+    title: 'Learn',
+    icon: GraduationCap,
+    items: ['Goethe-Institut', 'Institut Français', 'Bibliotheca Alexandrina', 'Arabic Calligraphy Museum'],
+  },
+  {
+    title: 'Work',
+    icon: Briefcase,
+    items: ['Workstation (Smouha)', 'Mind Yard (Coworking)', 'Espresso Lab (Cafe/Work)', 'Natural gas sector', 'International schools'],
+  }
+];
+
+export const diningData = {
+  budget: [
+    { name: 'Foul Mohamed Ahmed', desc: 'Legendary fuul and falafel.' },
+    { name: 'Tawn Coffee Shop', desc: 'Great Corniche views, budget friendly.' },
+    { name: 'Asmak Shabaan', desc: 'Great seafood in Al Max.' },
+    { name: 'Alban Swissra', desc: 'Famous for melted cheese dishes.' },
+    { name: 'Gad', desc: 'Reliable local chain for shawarma and grills.' }
+  ],
+  midRange: [
+    { name: 'Trianon', desc: 'Historic 1905 cafe/pastry shop.' },
+    { name: 'Chicken Tikka', desc: 'Grills with harbour view.' },
+    { name: 'Balbaa Village', desc: 'Famous for huge meat and seafood feasts.' },
+    { name: 'Chez Gaby', desc: 'Cozy, classic Italian bistro in Downtown.' },
+    { name: 'Fish Market', desc: 'Stunning harbour views and fresh catch.' }
+  ],
+  splurge: [
+    { name: 'White and Blue (Greek Club)', desc: 'Terrace overlooking the eastern harbour.' },
+    { name: 'San Giovanni', desc: 'Classic hotel dining by the sea.' },
+    { name: 'Four Seasons Restaurants', desc: 'Upscale Middle Eastern & International.' },
+    { name: 'Santa Lucia', desc: 'Elegant 1930s interiors and fine dining.' },
+    { name: 'Sea Gull', desc: 'Top-tier seafood dining in El-Max.' }
+  ]
+};
+
+export const accommodationData = [
+  {
+    category: 'Budget',
+    options: [
+      { name: 'Triomphe Hotel', desc: 'Decent choice with nice lobby.' },
+      { name: 'Normandy Hotel', desc: 'Unbeatable harbour views.' },
+      { name: 'Ithaka Hostel', desc: 'Friendly seaside hostel.' },
+      { name: 'Alexander the Great Hotel', desc: 'Central, clean, and affordable.' }
+    ]
+  },
+  {
+    category: 'Mid-Range',
+    options: [
+      { name: 'Steigenberger Cecil', desc: 'Grand old hotel, central location.' },
+      { name: 'Le Metropole', desc: 'Turn-of-the-century style, rooftop views.' },
+      { name: 'Paradise Inn', desc: 'Classic charm on the Corniche.' },
+      { name: 'Windsor Palace', desc: 'Historic hotel with rooftop Blue Harbor cafe.' },
+      { name: 'Romance Alexandria', desc: 'Seafront hotel in Saba Pasha.' }
+    ]
+  },
+  {
+    category: 'Splurge',
+    options: [
+      { name: 'Four Seasons San Stefano', desc: 'Upscale resort with private beach.' },
+      { name: 'Helnan Palestine', desc: 'Facing Montaza Royal Palace gardens.' },
+      { name: 'Hilton Corniche', desc: 'Modern luxury with sea views.' },
+      { name: 'Sunrise Alex Avenue', desc: 'Beachfront luxury with multiple pools.' },
+      { name: 'Hilton Green Plaza', desc: 'Inside the mall complex, great for business.' }
+    ]
+  }
+];

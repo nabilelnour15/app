@@ -5,6 +5,7 @@ import VisitPage from './pages/VisitPage';
 import InvestPage from './pages/InvestPage';
 import AboutPage from './pages/AboutPage';
 import NewsPage from './pages/NewsPage';
+import GovernorPage from './pages/GovernorPage';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/invest" element={<InvestPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/news" element={<NewsPage />} />
+        <Route path="/governor" element={<GovernorPage />} />
       </Routes>
     </Router>
   );
