@@ -14,12 +14,13 @@ export const investData = {
       "Tourist villages and their investment throughout the year.",
       "Access to two international airports in Alexandria (Al-Nozha and Borg Al-Arab) to provide services to the city, which increases investment opportunities and facilitates the traffic of imports and exports.",
       "Availability of agricultural projects on lands allocated to young graduates.",
-      "The private sector, which, based on experience, has proven that it is the driver that is most capable of achieving economic growth rates and leadership in investment."
-    ]
+      "The private sector, which, based on experience, has proven that it is the driver that is most capable of achieving economic growth rates and leadership in investment.",
+    ],
   },
   publicFreeZone: {
     title: "Alexandria Public Free Zone",
-    description: "Alexandria is the largest Egyptian sea port located on the Mediterranean. The Free Zone is located in Amreya on the Cairo/ Alexandria Road. It spreads across an area of 5,700,000 m2, and is 20 kms away from Alexandria Port and Al-Nozha International Airport. The Free Zone provides a wide range of services including shipping, unloading, navigation and transport. It is close to Alexandria, Al-Dekheila, and Al-Nozha and Borg Al-Arab International Airports.",
+    description:
+      "Alexandria is the largest Egyptian sea port located on the Mediterranean. The Free Zone is located in Amreya on the Cairo/ Alexandria Road. It spreads across an area of 5,700,000 m2, and is 20 kms away from Alexandria Port and Al-Nozha International Airport. The Free Zone provides a wide range of services including shipping, unloading, navigation and transport. It is close to Alexandria, Al-Dekheila, and Al-Nozha and Borg Al-Arab International Airports.",
     stats: "Alexandria is the largest free zone in Egypt.",
     businesses: [
       "Chemicals",
@@ -28,8 +29,8 @@ export const investData = {
       "Spinning and weaving",
       "Ready-made apparel",
       "Cooking oils and vegetable oil derivatives",
-      "Iron and steel production"
-    ]
+      "Iron and steel production",
+    ],
   },
   rawMaterials: [
     {
@@ -47,44 +48,74 @@ export const investData = {
         "Abrasives (sandpaper, rock cutting)",
         "Production of sodium silicate (soap and zeolites)",
         "Production of silica firebricks",
-        "Manufacture of silicon carbide"
-      ]
+        "Manufacture of silicon carbide",
+      ],
+      image: "/images/white_sand.jpg",
     },
     {
       name: "Sodium Chloride",
       region: "Alexandria",
       location: "Al-Max",
-      description: "Extracted from sea water via solar evaporation or vacuum evaporation.",
-      uses: "Production of caustic soda and chlorine, used in the salt industry."
-    }
+      description:
+        "Extracted from sea water via solar evaporation or vacuum evaporation.",
+      uses: "Production of caustic soda and chlorine, used in the salt industry.",
+      image: "/images/sodium_chloride.jpg",
+    },
   ],
   ports: [
     {
       name: "Port of Alexandria",
-      description: "Main port in Egypt, through which over 55% of Egypt's foreign trade is trafficked.",
-      link: "https://www.apa.gov.eg/"
+      description:
+        "Main port in Egypt, through which over 55% of Egypt's foreign trade is trafficked.",
+      link: "https://www.apa.gov.eg/",
+      image: "/images/portOfAlexanrida.png",
     },
     {
       name: "Port of Al-Dekheila",
-      description: "Natural extension of Alexandria Port. Established at the site of Dekheila air base, 7km west by sea."
-    }
+      description:
+        "Natural extension of Alexandria Port. Established at the site of Dekheila air base, 7km west by sea.",
+      image: "/images/DekhaliaPort.jpg",
+    },
   ],
   investmentDrivers: [
     {
       title: "Industrial Investment",
-      description: "Alexandria represents 40% of Egypt's total industrial production. Key areas: Muharram Bey, Kabbari, Al Seyouf, Abu Qir, Borg Al Arab.",
-      sectors: ["Chemicals", "Metallurgy", "Leather", "Electricals", "Engineering", "Textiles", "Cement", "Oil"]
+      description:
+        "Alexandria represents 40% of Egypt's total industrial production. Key areas: Muharram Bey, Kabbari, Al Seyouf, Abu Qir, Borg Al Arab.",
+      sectors: [
+        "Chemicals",
+        "Metallurgy",
+        "Leather",
+        "Electricals",
+        "Engineering",
+        "Textiles",
+        "Cement",
+        "Oil",
+      ],
+      image: "/images/invest-industrial.jpg",
     },
     {
       title: "Tourism Investment",
-      description: "Distinctive destination with 41+ attractions. Highlights: Qaitbey Citadel, Pompey's Pillar, Bibliotheca Alexandrina.",
-      types: ["Leisure", "Religious", "Medical", "Sports", "Yachts", "Festivals", "Conferences"]
+      description:
+        "Distinctive destination with 41+ attractions. Highlights: Qaitbey Citadel, Pompey's Pillar, Bibliotheca Alexandrina.",
+      types: [
+        "Leisure",
+        "Religious",
+        "Medical",
+        "Sports",
+        "Yachts",
+        "Festivals",
+        "Conferences",
+      ],
+      image: "/images/invest-tourism.jpg",
     },
     {
       title: "Agricultural Investment",
-      description: "162.1k acres of farmed land + 133k acres arable. Key crops depend on Al Mahmoudeya Canal and rainwater in NW Coast.",
-      intensification: "1.96 coefficient"
-    }
+      description:
+        "162.1k acres of farmed land + 133k acres arable. Key crops depend on Al Mahmoudeya Canal and rainwater in NW Coast.",
+      intensification: "1.96 coefficient",
+      image: "/images/invest-agriculture.jpg",
+    },
   ],
   investmentZones: {
     objectives: [
@@ -92,7 +123,7 @@ export const investData = {
       "Establishment of integrated cluster groupings",
       "Excellence in service provision and regulatory procedures",
       "SME development",
-      "Private sector participation in land provision"
+      "Private sector participation in land provision",
     ],
     industrialZones: [
       "New Manshia industrial zone",
@@ -103,8 +134,8 @@ export const investData = {
       "Ajami industrial zone",
       "Al Nahda industrial zone and its expansions",
       "Ohm Zagheou Industrial zone",
-      "Borg Al Arab industrial zone"
-    ]
+      "Borg Al Arab industrial zone",
+    ],
   },
   investmentLaws: {
     provisions: [
@@ -113,7 +144,7 @@ export const investData = {
       "Guarantees against confiscation/nationalization",
       "Right to own land",
       "Right to maintain foreign currency accounts",
-      "Equality regardless of nationality"
+      "Equality regardless of nationality",
     ],
     fields: [
       "Air transportation",
@@ -122,8 +153,8 @@ export const investData = {
       "Land reclamation",
       "Tourism & Housing",
       "Software & Electronics",
-      "Waste treatment"
-    ]
+      "Waste treatment",
+    ],
   },
   opportunities: [
     {
@@ -131,49 +162,54 @@ export const investData = {
       location: "Central District (near Bibliotheca Alexandrina)",
       area: "16,800 m2",
       purpose: "7-star tourist hotel",
-      approach: "BOT"
+      approach: "BOT",
     },
     {
       title: "Establishment of a Recreational or Medical City",
       location: "Behind Carrefour",
       area: "350 acres",
       purpose: "Full leisure range or specialized medical city",
-      approach: "BOT"
+      approach: "BOT",
     },
     {
       title: "Restoration of the Ancient Lighthouse (Pharos)",
       location: "Port of Alexandria",
-      purpose: "Scientific museum, hotel (300-400 rooms), conference center, marina",
-      approach: "National"
+      purpose:
+        "Scientific museum, hotel (300-400 rooms), conference center, marina",
+      approach: "National",
     },
     {
       title: "International Maritime Rowing Stream",
       location: "Behind Al Nozha Airport",
       length: "2300 m",
       purpose: "Tourist sports recreational project",
-      approach: "BOT"
-    }
+      approach: "BOT",
+    },
   ],
   successStories: [
     {
       category: "Healthcare",
       name: "Dar Al-Shefa Hospital",
-      description: "One of the top healthcare centers in Egypt, committed to providing services to all citizens."
+      description:
+        "One of the top healthcare centers in Egypt, committed to providing services to all citizens.",
     },
     {
       category: "Petrochemicals",
       name: "MIDOR Refinery",
-      description: "Deep conversion refinery, US$1.4 Billion investment, 500 acres in Amreya Free Zone."
+      description:
+        "Deep conversion refinery, US$1.4 Billion investment, 500 acres in Amreya Free Zone.",
     },
     {
       category: "Logistics",
       name: "Egytrans",
-      description: "Founded in 1973, runs integrated forwarding services with 8 branch offices in Egypt."
+      description:
+        "Founded in 1973, runs integrated forwarding services with 8 branch offices in Egypt.",
     },
     {
       category: "Retail",
       name: "Debenhams",
-      description: "First store in Africa opened in Alexandria City Centre mall in 2010."
-    }
-  ]
+      description:
+        "First store in Africa opened in Alexandria City Centre mall in 2010.",
+    },
+  ],
 };

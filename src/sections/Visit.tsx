@@ -78,36 +78,44 @@ export default function Visit({ isTeaser = false }: { isTeaser?: boolean }) {
       {/* Hero Section */}
       <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-[#0068c8]">
-          <img 
-            src="/images/feature-beach.jpg" 
-            alt="Alexandria Beach" 
+          <img
+            src="/images/Alexandria-Bibliotheca-interior.jpg"
+            alt="Alexandria Beach"
             className="w-full h-full object-cover mix-blend-overlay opacity-60"
           />
         </div>
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto text-white">
-          <h1 className="font-['Montserrat'] text-4xl md:text-6xl font-bold mb-6">Plan Your Journey</h1>
-          <p className="text-xl opacity-90">Everything you need to know to visit the Pearl of the Mediterranean</p>
+          <h1 className="font-['Montserrat'] text-4xl md:text-6xl font-bold mb-6">
+            Plan Your Journey
+          </h1>
+          <p className="text-xl opacity-90">
+            Everything you need to know to visit the Pearl of the Mediterranean
+          </p>
         </div>
       </section>
 
       <div className="alex-container py-16 space-y-24">
-        
         {/* Intro & Climate Section */}
         <section>
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <SectionHeader title="Climate & Orientation" subtitle="When to go and what to expect" />
+              <SectionHeader
+                title="Climate & Orientation"
+                subtitle="When to go and what to expect"
+              />
               <p className="text-[#5d6c7b] leading-relaxed mb-6">
                 {climateData.description}
               </p>
-              
+
               <div className="bg-[#f8fafc] p-6 rounded-2xl border border-gray-100">
                 <h3 className="font-bold text-[#0d1623] mb-4 flex items-center gap-2">
                   <MapPin className="w-5 h-5 text-[#0068c8]" /> Orientation
                 </h3>
                 <p className="text-sm text-[#5d6c7b] leading-relaxed">
-                  Alexandria is a ribbon city, stretching 30km along the coast. The <strong>Corniche</strong> is its lifeline. 
-                  Almost all sights and hotels are along this strip. Transport is funnelled here, making taxis and buses easy to find.
+                  Alexandria is a ribbon city, stretching 30km along the coast.
+                  The <strong>Corniche</strong> is its lifeline. Almost all
+                  sights and hotels are along this strip. Transport is funnelled
+                  here, making taxis and buses easy to find.
                 </p>
               </div>
             </div>
@@ -117,7 +125,9 @@ export default function Visit({ isTeaser = false }: { isTeaser?: boolean }) {
                 <h3 className="font-bold text-lg flex items-center gap-2">
                   <Thermometer className="w-5 h-5" /> Climate Statistics
                 </h3>
-                <span className="text-xs opacity-80 bg-white/10 px-2 py-1 rounded">Source: WMO</span>
+                <span className="text-xs opacity-80 bg-white/10 px-2 py-1 rounded">
+                  Source: WMO
+                </span>
               </div>
               <div className="p-6 flex-grow min-h-[350px]">
                 <ResponsiveContainer width="100%" height="100%">
@@ -130,52 +140,66 @@ export default function Visit({ isTeaser = false }: { isTeaser?: boolean }) {
                     }))}
                     margin={{ top: 20, right: 20, bottom: 20, left: 0 }}
                   >
-                    <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f1f5f9" />
-                    <XAxis 
-                      dataKey="name" 
-                      axisLine={false} 
-                      tickLine={false} 
-                      tick={{ fill: '#64748b', fontSize: 12 }} 
+                    <CartesianGrid
+                      strokeDasharray="3 3"
+                      vertical={false}
+                      stroke="#f1f5f9"
                     />
-                    <YAxis 
+                    <XAxis
+                      dataKey="name"
+                      axisLine={false}
+                      tickLine={false}
+                      tick={{ fill: "#64748b", fontSize: 12 }}
+                    />
+                    <YAxis
                       yAxisId="left"
-                      orientation="left" 
-                      axisLine={false} 
-                      tickLine={false} 
-                      tick={{ fill: '#64748b', fontSize: 12 }}
+                      orientation="left"
+                      axisLine={false}
+                      tickLine={false}
+                      tick={{ fill: "#64748b", fontSize: 12 }}
                       unit="°"
                     />
-                    <YAxis 
+                    <YAxis
                       yAxisId="right"
-                      orientation="right" 
-                      axisLine={false} 
-                      tickLine={false} 
-                      tick={{ fill: '#64748b', fontSize: 12 }}
+                      orientation="right"
+                      axisLine={false}
+                      tickLine={false}
+                      tick={{ fill: "#64748b", fontSize: 12 }}
                       unit="mm"
                     />
-                    <Tooltip 
-                      contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }}
-                      itemStyle={{ fontWeight: 'bold' }}
+                    <Tooltip
+                      contentStyle={{
+                        borderRadius: "12px",
+                        border: "none",
+                        boxShadow: "0 10px 15px -3px rgb(0 0 0 / 0.1)",
+                      }}
+                      itemStyle={{ fontWeight: "bold" }}
                     />
-                    <Legend verticalAlign="top" height={36}/>
-                    <Bar yAxisId="right" dataKey="precip" name="Rain (mm)" fill="#bfdbfe" radius={[4, 4, 0, 0]} />
-                    <Area 
+                    <Legend verticalAlign="top" height={36} />
+                    <Bar
+                      yAxisId="right"
+                      dataKey="precip"
+                      name="Rain (mm)"
+                      fill="#bfdbfe"
+                      radius={[4, 4, 0, 0]}
+                    />
+                    <Area
                       yAxisId="left"
-                      type="monotone" 
-                      dataKey="temp" 
+                      type="monotone"
+                      dataKey="temp"
                       name="High (°C)"
-                      stroke="#ef4444" 
-                      fillOpacity={0.1} 
-                      fill="#fee2e2" 
+                      stroke="#ef4444"
+                      fillOpacity={0.1}
+                      fill="#fee2e2"
                       strokeWidth={3}
                     />
-                    <Area 
+                    <Area
                       yAxisId="left"
-                      type="monotone" 
-                      dataKey="low" 
+                      type="monotone"
+                      dataKey="low"
                       name="Low (°C)"
-                      stroke="#3b82f6" 
-                      fillOpacity={0} 
+                      stroke="#3b82f6"
+                      fillOpacity={0}
                       strokeWidth={2}
                       strokeDasharray="5 5"
                     />
@@ -183,7 +207,10 @@ export default function Visit({ isTeaser = false }: { isTeaser?: boolean }) {
                 </ResponsiveContainer>
               </div>
               <div className="px-6 py-4 bg-[#f8fafc] border-t border-gray-100 flex gap-4 text-xs text-[#64748b] justify-center">
-                <div className="flex items-center gap-1"><Info className="w-3 h-3" /> Average High/Low and Precipitation</div>
+                <div className="flex items-center gap-1">
+                  <Info className="w-3 h-3" /> Average High/Low and
+                  Precipitation
+                </div>
               </div>
             </div>
           </div>
@@ -194,14 +221,14 @@ export default function Visit({ isTeaser = false }: { isTeaser?: boolean }) {
           <SectionHeader title="Getting There & Around" />
           <div className="flex flex-col md:flex-row gap-8">
             <div className="md:w-1/4 flex md:flex-col gap-2 overflow-x-auto md:overflow-visible pb-4 md:pb-0">
-              {transportTabs.map(tab => (
+              {transportTabs.map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTransportTab(tab.id)}
                   className={`px-6 py-4 rounded-xl text-left font-bold transition-all whitespace-nowrap md:whitespace-normal ${
-                    activeTransportTab === tab.id 
-                    ? 'bg-[#0068c8] text-white shadow-lg' 
-                    : 'bg-[#f3f4f6] text-[#5d6c7b] hover:bg-[#e6f1fc]'
+                    activeTransportTab === tab.id
+                      ? "bg-[#0068c8] text-white shadow-lg"
+                      : "bg-[#f3f4f6] text-[#5d6c7b] hover:bg-[#e6f1fc]"
                   }`}
                 >
                   {tab.label}
@@ -210,18 +237,27 @@ export default function Visit({ isTeaser = false }: { isTeaser?: boolean }) {
             </div>
             <div className="md:w-3/4">
               <div className="grid md:grid-cols-2 gap-6">
-                {transportTabs.find(t => t.id === activeTransportTab)?.content.map((item) => {
-                  const Icon = item.icon;
-                  return (
-                    <div key={item.type} className="bg-white p-6 rounded-2xl border border-gray-100 hover:shadow-md transition-shadow">
-                      <div className="w-10 h-10 bg-[#e6f1fc] rounded-full flex items-center justify-center mb-4">
-                        <Icon className="w-5 h-5 text-[#0068c8]" />
+                {transportTabs
+                  .find((t) => t.id === activeTransportTab)
+                  ?.content.map((item) => {
+                    const Icon = item.icon;
+                    return (
+                      <div
+                        key={item.type}
+                        className="bg-white p-6 rounded-2xl border border-gray-100 hover:shadow-md transition-shadow"
+                      >
+                        <div className="w-10 h-10 bg-[#e6f1fc] rounded-full flex items-center justify-center mb-4">
+                          <Icon className="w-5 h-5 text-[#0068c8]" />
+                        </div>
+                        <h4 className="font-bold text-[#0d1623] mb-2">
+                          {item.type}
+                        </h4>
+                        <p className="text-sm text-[#5d6c7b]">
+                          {item.description}
+                        </p>
                       </div>
-                      <h4 className="font-bold text-[#0d1623] mb-2">{item.type}</h4>
-                      <p className="text-sm text-[#5d6c7b]">{item.description}</p>
-                    </div>
-                  );
-                })}
+                    );
+                  })}
               </div>
             </div>
           </div>
@@ -229,10 +265,13 @@ export default function Visit({ isTeaser = false }: { isTeaser?: boolean }) {
 
         {/* Attractions Section */}
         <section>
-          <SectionHeader title="Things to See" subtitle="Historical monuments, museums, and modern marvels" />
-          
+          <SectionHeader
+            title="Things to See"
+            subtitle="Historical monuments, museums, and modern marvels"
+          />
+
           <div className="flex flex-wrap gap-3 mb-8">
-            {attractionCategories.map(cat => {
+            {attractionCategories.map((cat) => {
               const Icon = cat.icon;
               return (
                 <button
@@ -240,8 +279,8 @@ export default function Visit({ isTeaser = false }: { isTeaser?: boolean }) {
                   onClick={() => setActiveAttractionCat(cat.id)}
                   className={`flex items-center gap-2 px-5 py-2.5 rounded-full font-medium transition-all ${
                     activeAttractionCat === cat.id
-                    ? 'bg-[#0d1623] text-white'
-                    : 'border border-gray-200 text-[#5d6c7b] hover:border-[#0d1623] hover:text-[#0d1623]'
+                      ? "bg-[#0d1623] text-white"
+                      : "border border-gray-200 text-[#5d6c7b] hover:border-[#0d1623] hover:text-[#0d1623]"
                   }`}
                 >
                   <Icon className="w-4 h-4" />
@@ -252,33 +291,45 @@ export default function Visit({ isTeaser = false }: { isTeaser?: boolean }) {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {attractionCategories.find(c => c.id === activeAttractionCat)?.items.map((item: any, idx) => (
-              <div key={idx} className="group bg-white rounded-3xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                <div className="relative h-64 overflow-hidden">
-                  <img 
-                    src={item.image} 
-                    alt={item.name} 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    onError={(e: any) => e.target.src = '/images/hero-bg.jpg'}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0d1623]/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <span className="text-[10px] uppercase tracking-widest font-bold text-white/80 bg-white/10 backdrop-blur-md px-2 py-1 rounded mb-2 inline-block">
-                      {item.location}
-                    </span>
+            {attractionCategories
+              .find((c) => c.id === activeAttractionCat)
+              ?.items.map((item: any, idx) => (
+                <div
+                  key={idx}
+                  className="group bg-white rounded-3xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                >
+                  <div className="relative h-64 overflow-hidden">
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      onError={(e: any) =>
+                        (e.target.src = "/images/hero-bg.jpg")
+                      }
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0d1623]/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <span className="text-[10px] uppercase tracking-widest font-bold text-white/80 bg-white/10 backdrop-blur-md px-2 py-1 rounded mb-2 inline-block">
+                        {item.location}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="p-8">
+                    <div className="flex justify-between items-start mb-4">
+                      <h3 className="font-bold text-xl text-[#0d1623] group-hover:text-[#0068c8] transition-colors line-clamp-1">
+                        {item.name}
+                      </h3>
+                    </div>
+                    <p className="text-[#5d6c7b] text-sm leading-relaxed line-clamp-3 mb-6">
+                      {item.desc}
+                    </p>
+                    <div className="flex items-center text-[#0068c8] font-bold text-sm">
+                      Explore Details{" "}
+                      <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
+                    </div>
                   </div>
                 </div>
-                <div className="p-8">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="font-bold text-xl text-[#0d1623] group-hover:text-[#0068c8] transition-colors line-clamp-1">{item.name}</h3>
-                  </div>
-                  <p className="text-[#5d6c7b] text-sm leading-relaxed line-clamp-3 mb-6">{item.desc}</p>
-                  <div className="flex items-center text-[#0068c8] font-bold text-sm">
-                    Explore Details <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
-                  </div>
-                </div>
-              </div>
-            ))}
+              ))}
           </div>
         </section>
 
@@ -288,15 +339,25 @@ export default function Visit({ isTeaser = false }: { isTeaser?: boolean }) {
             {activitiesData.map((activity) => {
               const Icon = activity.icon;
               return (
-                <div key={activity.title} className="bg-[#f8fafc] p-6 rounded-2xl">
+                <div
+                  key={activity.title}
+                  className="bg-[#f8fafc] p-6 rounded-2xl"
+                >
                   <div className="flex items-center gap-3 mb-4">
                     <Icon className="w-6 h-6 text-[#0068c8]" />
-                    <h3 className="font-bold text-xl text-[#0d1623]">{activity.title}</h3>
+                    <h3 className="font-bold text-xl text-[#0d1623]">
+                      {activity.title}
+                    </h3>
                   </div>
                   <ul className="space-y-2">
                     {activity.items.map((item, i) => (
-                      <li key={i} className="text-sm text-[#5d6c7b] flex items-start gap-2">
-                        <span className="text-[#0068c8] text-lg leading-none">•</span>
+                      <li
+                        key={i}
+                        className="text-sm text-[#5d6c7b] flex items-start gap-2"
+                      >
+                        <span className="text-[#0068c8] text-lg leading-none">
+                          •
+                        </span>
                         {item}
                       </li>
                     ))}
@@ -316,13 +377,20 @@ export default function Visit({ isTeaser = false }: { isTeaser?: boolean }) {
               {Object.entries(diningData).map(([key, items]) => (
                 <div key={key}>
                   <h4 className="font-bold text-[#0068c8] uppercase tracking-wider text-sm mb-3">
-                    {key === 'midRange' ? 'Mid-Range' : key}
+                    {key === "midRange" ? "Mid-Range" : key}
                   </h4>
                   <div className="space-y-3">
                     {items.map((item, i) => (
-                      <div key={i} className="flex justify-between items-baseline border-b border-gray-100 pb-2 last:border-0">
-                        <span className="font-medium text-[#0d1623]">{item.name}</span>
-                        <span className="text-xs text-[#5d6c7b] text-right truncate ml-4 w-1/2">{item.desc}</span>
+                      <div
+                        key={i}
+                        className="flex justify-between items-baseline border-b border-gray-100 pb-2 last:border-0"
+                      >
+                        <span className="font-medium text-[#0d1623]">
+                          {item.name}
+                        </span>
+                        <span className="text-xs text-[#5d6c7b] text-right truncate ml-4 w-1/2">
+                          {item.desc}
+                        </span>
                       </div>
                     ))}
                   </div>
@@ -342,9 +410,16 @@ export default function Visit({ isTeaser = false }: { isTeaser?: boolean }) {
                   </h4>
                   <div className="space-y-3">
                     {category.options.map((item, i) => (
-                      <div key={i} className="flex justify-between items-baseline border-b border-gray-100 pb-2 last:border-0">
-                        <span className="font-medium text-[#0d1623]">{item.name}</span>
-                        <span className="text-xs text-[#5d6c7b] text-right truncate ml-4 w-1/2">{item.desc}</span>
+                      <div
+                        key={i}
+                        className="flex justify-between items-baseline border-b border-gray-100 pb-2 last:border-0"
+                      >
+                        <span className="font-medium text-[#0d1623]">
+                          {item.name}
+                        </span>
+                        <span className="text-xs text-[#5d6c7b] text-right truncate ml-4 w-1/2">
+                          {item.desc}
+                        </span>
                       </div>
                     ))}
                   </div>
@@ -360,8 +435,10 @@ export default function Visit({ isTeaser = false }: { isTeaser?: boolean }) {
             <div>
               <h3 className="text-2xl font-bold mb-2">Need Help?</h3>
               <p className="text-white/70 max-w-xl">
-                The Egyptian Tourist Authority has offices at Raml Station, Misr Railway Station, and the Airports.
-                Dial <span className="text-[#3898ec] font-mono">19654</span> for tourist police emergency.
+                The Egyptian Tourist Authority has offices at Raml Station, Misr
+                Railway Station, and the Airports. Dial{" "}
+                <span className="text-[#3898ec] font-mono">19654</span> for
+                tourist police emergency.
               </p>
             </div>
             <button className="px-8 py-3 bg-[#0068c8] hover:bg-[#005bb0] text-white font-bold rounded-xl transition-all shadow-lg shadow-[#0068c8]/25 whitespace-nowrap">
@@ -369,7 +446,6 @@ export default function Visit({ isTeaser = false }: { isTeaser?: boolean }) {
             </button>
           </div>
         </section>
-
       </div>
     </div>
   );

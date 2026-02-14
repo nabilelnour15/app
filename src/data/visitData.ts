@@ -71,50 +71,135 @@ export const transportTabs = [
 
 export const attractionCategories = [
   {
-    id: 'historical',
-    label: 'Historical',
+    id: "historical",
+    label: "Historical",
     icon: Landmark,
     items: [
-      { name: 'Citadel of Qaitbay', desc: '1477 fortress on Pharos site. Maritime Museum inside. LE150 foreigners.', location: 'Anfushi', image: '/images/feature-citadel.jpg' },
-      { name: 'Catacombs of Kom el Shoqafa', desc: 'Roman burial site, "Mound of Shards". Deep spiral stairway. LE150.', location: 'Carmouz', image: '/images/blog-archaeology.jpg' },
-      { name: 'Pompey\'s Pillar', desc: '25m granite column for Diocletian (297 AD). LE150.', location: 'Karmouz', image: '/images/pompeys_pillar.webp' },
-      { name: 'Roman Amphitheatre', desc: 'Kom el-Dikka. Marble seating for 800, Villa of the Birds mosaics. LE150.', location: 'Kom el-Dikka', image: '/images/roman_amphitheatre.webp' },
-      { name: 'Montaza Palace', desc: 'Royal gardens (LE25 entry) and palace complex (Salamlek hotel).', location: 'El Montazah', image: '/images/feature-beach.jpg' },
-      { name: 'Ras El-Tin Palace', desc: 'Oldest royal palace in Egypt (Exterior/Gardens only).', location: 'Western Harbor', image: '/images/service-visitors.jpg' }
-    ]
+      {
+        name: "Citadel of Qaitbay",
+        desc: "1477 fortress on Pharos site. Maritime Museum inside. LE150 foreigners.",
+        location: "Anfushi",
+        image: "/images/citadel.jpg",
+      },
+      {
+        name: "Catacombs of Kom el Shoqafa",
+        desc: 'Roman burial site, "Mound of Shards". Deep spiral stairway. LE150.',
+        location: "Carmouz",
+        image: "/images/the-tombs-of-Kom-el-Shoqafa.jpg",
+      },
+      {
+        name: "Pompey's Pillar",
+        desc: "25m granite column for Diocletian (297 AD). LE150.",
+        location: "Karmouz",
+        image: "/images/Serapeum-of-Alexandria.jpg",
+      },
+      {
+        name: "Roman Amphitheatre",
+        desc: "Kom el-Dikka. Marble seating for 800, Villa of the Birds mosaics. LE150.",
+        location: "Kom el-Dikka",
+        image: "/images/Ancient-Roman-theater-alexandria.jpg",
+      },
+      {
+        name: "Montaza Palace",
+        desc: "Royal gardens (LE25 entry) and palace complex (Salamlek hotel).",
+        location: "El Montazah",
+        image: "/images/A-wonderful-picture-of-Montazah-Palace.jpg",
+      },
+      {
+        name: "Ras El-Tin Palace",
+        desc: "Oldest royal palace in Egypt (Exterior/Gardens only).",
+        location: "Western Harbor",
+        image: "/images/Ras-El-Tin-Palace-Alexandria-Egypt.jpg",
+      },
+    ],
   },
   {
-    id: 'museums',
-    label: 'Museums',
-    icon:  BookOpen,
+    id: "museums",
+    label: "Museums",
+    icon: BookOpen,
     items: [
-      { name: 'Alexandria National Museum', desc: '1800+ pieces, Pharaonic to Islamic. LE100.', location: 'Tariq el-Horreyya', image: '/images/blog-culture.jpg' },
-      { name: 'Graeco-Roman Museum', desc: 'Vast collection (3rd cent BC - 3rd cent CE). LE150.', location: 'Latin Quarter', image: '/images/service-culture.jpg' },
-      { name: 'Royal Jewelry Museum', desc: 'Opulent jewelry of the Muhammad Ali Dynasty.', location: 'Zizenia', image: '/images/royal_jewelry_museum.webp' },
-      { name: 'Cavafy Museum', desc: 'House of the Greek-Alexandrian poet. (Closed as of Feb 2024).', location: 'Downtown', image: '/images/blog-culture.jpg' },
-      { name: 'Museum of Fine Arts', desc: 'Features works by Egyptian and Middle Eastern artists.', location: 'Moharam Bek', image: '/images/blog-culture.jpg' }
-    ]
+      {
+        name: "Alexandria National Museum",
+        desc: "1800+ pieces, Pharaonic to Islamic. LE100.",
+        location: "Tariq el-Horreyya",
+        image: "/images/The-National-Museum-from-the-outside-in.jpg",
+      },
+      {
+        name: "Graeco-Roman Museum",
+        desc: "Vast collection (3rd cent BC - 3rd cent CE). LE150.",
+        location: "Latin Quarter",
+        image: "/images/Greco-Roman-Museum-in-Alexandria.jpg",
+      },
+      {
+        name: "Royal Jewelry Museum",
+        desc: "Opulent jewelry of the Muhammad Ali Dynasty.",
+        location: "Zizenia",
+        image: "/images/Royal-Jewelery-Museum.jpg",
+      },
+      {
+        name: "Cavafy Museum",
+        desc: "House of the Greek-Alexandrian poet. (Closed as of Feb 2024).",
+        location: "Downtown",
+        image: "/images/Cavafy-Museum.jpg",
+      },
+      {
+        name: "Museum of Fine Arts",
+        desc: "Features works by Egyptian and Middle Eastern artists.",
+        location: "Moharam Bek",
+        image: "/images/AlexFineArtsMuseum.jpg",
+      },
+    ],
   },
   {
-    id: 'religious',
-    label: 'Religious',
+    id: "religious",
+    label: "Religious",
     icon: Sun,
     items: [
-      { name: 'El-Mursi Abul-Abbas Mosque', desc: 'Stunning mosque with 73m minaret over a Sufi saint\'s tomb.', location: 'Anfoushi', image: '/images/abul_abbas_mosque.webp' },
-      { name: 'Eliyahu Hanavi Synagogue', desc: 'Neo-Gothic synagogue standing since 1850.', location: 'Nabi Daniel St', image: '/images/eliyahu_hanavi_synagogue.webp' },
-      { name: 'St. Mark\'s Cathedral', desc: 'Historical seat of the Coptic Orthodox Pope.', location: 'Raml Station', image: '/images/blog-culture.jpg' }
-    ]
+      {
+        name: "El-Mursi Abul-Abbas Mosque",
+        desc: "Stunning mosque with 73m minaret over a Sufi saint's tomb.",
+        location: "Anfoushi",
+        image: "/images/Sidi-Morsi-Abu-al-Abbas-Mosque-alexandria.jpg",
+      },
+      {
+        name: "Eliyahu Hanavi Synagogue",
+        desc: "Neo-Gothic synagogue standing since 1850.",
+        location: "Nabi Daniel St",
+        image: "/images/Eliyahu-Hanavi-Synagogue.jpg",
+      },
+      {
+        name: "St. Mark's Cathedral",
+        desc: "Historical seat of the Coptic Orthodox Pope.",
+        location: "Raml Station",
+        image: "/images/St-Mark-Cathedral.jpg",
+      },
+    ],
   },
   {
-    id: 'modern',
-    label: 'Modern',
+    id: "modern",
+    label: "Modern",
     icon: Camera,
     items: [
-      { name: 'Bibliotheca Alexandrina', desc: 'Massive library, planetarium, antiquities museum. LE150 foreigners.', location: 'Shatby', image: '/images/feature-library.jpg' },
-      { name: 'Stanley Bridge', desc: 'Iconic bridge with panoramic sea views.', location: 'Stanley', image: '/images/stanley_bridge.webp' },
-      { name: 'Planetarium Science Center', desc: 'Neon-lit spherical theater inside the Library complex.', location: 'Shatby', image: '/images/planetarium.webp' }
-    ]
-  }
+      {
+        name: "Bibliotheca Alexandrina",
+        desc: "Massive library, planetarium, antiquities museum. LE150 foreigners.",
+        location: "Shatby",
+        image: "/images/Alexandria_Bibliotheca.jpg",
+      },
+      {
+        name: "Stanley Bridge",
+        desc: "Iconic bridge with panoramic sea views.",
+        location: "Stanley",
+        image: "/images/Stanley-Bridge-alexandria.jpg",
+      },
+      {
+        name: "Planetarium Science Center",
+        desc: "Neon-lit spherical theater inside the Library complex.",
+        location: "Shatby",
+        image: "/images/PL.jpg",
+      },
+    ],
+  },
 ];
 
 export const activitiesData = [
